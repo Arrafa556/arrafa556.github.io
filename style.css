@@ -1,0 +1,212 @@
+  
+:root {
+  --latar: #f5f5f5;
+  --kartu: #ffffff;
+  --teks: #1f2a2e;            /* dikoreksi: sebelumnya #if2a2e (huruf "i" bukan angka hex) */
+  --redup: #5d6a6f;
+  --garis: #d9d3c8;
+  --aksen: #0a4352;
+  --aksen-teks: #ffffff;
+  --label-bg: #e6efe9;        /* dikoreksi: sebelumnya bernama --aksen-bg, padahal kode memakai --label-bg */
+  --label-teks: #17493a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --latar: #12191b;
+    --kartu: #1e1e1e;
+    --teks: #ffffff;
+    --redup: #9fb0b5;
+    --garis: #2e3d41;
+    --aksen: #7cc8d8;
+    --aksen-teks: #0b1417;
+    --label-bg: #213a33;
+    --label-teks: #b7e4d0;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+
+  margin: 0;
+  background: var(--latar);
+  color: var(--teks);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+}
+
+a { color: var(--aksen); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--aksen);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.bungkus { width: min(100% - 2.5rem, 64rem); margin-inline: auto; }
+
+.lewati {
+  position: absolute;
+  left: -999px;
+  top: .5rem;
+  padding: .5rem 1rem;
+  background: var(--aksen);
+  color: var(--aksen-teks);
+  z-index: 20;
+}
+.lewati:focus { left: .5rem; }
+
+/* ---------- Header ---------- */
+.atas {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--latar);
+  border-bottom: 1px solid var(--garis);
+}
+.atas-isi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.75rem;
+  gap: 1rem;
+}
+.logo { font-weight: 700; font-size: 1.1rem; color: var(--teks); text-decoration: none; }
+.menu { display: flex; gap: 1.5rem; }
+.menu a { color: var(--teks); text-decoration: none; padding: .25rem 0; }
+.menu a:hover { color: var(--aksen); text-decoration: underline; }
+.tombol-menu {
+  display: none;
+  padding: .45rem .9rem;
+  font: inherit;
+  color: var(--teks);
+  background: transparent;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 40rem) {
+  .tombol-menu { display: inline-block; }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: .5rem 1.25rem 1rem;
+    background: var(--latar);
+    border-bottom: 1px solid var(--garis);
+  }
+  .menu.terbuka { display: flex; }
+  .menu a { padding: .7rem 0; border-top: 1px solid var(--garis); }
+  .menu a:first-child { border-top: 0; }
+}
+
+/* ---------- Panel di atas gambar latar ----------
+   Supaya tulisan tetap terbaca, tiap bagian diberi lapisan
+   warna semi transparan di atas gambar. Ubah angka 85% untuk
+   mengatur seberapa jelas gambar terlihat (makin kecil = makin jelas). */
+.hero, .bagian, .kaki {
+  background: color-mix(in srgb, var(--latar) 85%, transparent);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: clamp(3.5rem, 10vw, 7rem) 0 clamp(3rem, 8vw, 5rem); }
+.kecil { margin: 0 0 .5rem; color: var(--redup); }
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 8vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.peran { margin: .75rem 0 1.25rem; font-size: 1.25rem; color: var(--aksen); font-weight: 600; }
+.pengantar { max-width: 38rem; margin: 0 0 2rem; font-size: 1.1rem; color: var(--redup); }
+.aksi { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.tombol {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  font-weight: 600;
+  color: var(--teks);
+  text-decoration: none;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+}
+.tombol:hover { border-color: var(--aksen); }
+.tombol.utama { background: var(--aksen); color: var(--aksen-teks); border-color: var(--aksen); }
+.tombol.utama:hover { filter: brightness(1.12); }
+
+/* ---------- Bagian umum ---------- */
+.bagian { padding: clamp(3rem, 7vw, 5rem) 0; border-top: 1px solid var(--garis); }
+h2 { margin: 0 0 .5rem; font-size: 1.75rem; letter-spacing: -0.01em; }
+h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.pengantar-bagian { margin: 0 0 2rem; color: var(--redup); }
+
+.dua-kolom { display: grid; gap: 1.5rem 3rem; grid-template-columns: 1fr 2fr; }
+@media (max-width: 40rem) { .dua-kolom { grid-template-columns: 1fr; } }
+.teks p { margin: 0 0 1rem; max-width: 40rem; }
+
+/* ---------- Proyek ---------- */
+.grid-proyek {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+.proyek {
+  display: flex;
+  flex-direction: column;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gambar {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--label-bg);
+  display: grid;
+  place-items: center;
+}
+.gambar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pengganti { padding: 1rem; font-size: .9rem; text-align: center; color: var(--label-teks); }
+.isi { display: flex; flex-direction: column; flex: 1; padding: 1.25rem; }
+.isi p { margin: 0 0 1rem; color: var(--redup); font-size: .95rem; }
+.tautan { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: auto; font-size: .95rem; font-weight: 600; }
+.catatan-proyek { color: var(--redup); font-weight: 400; }
+
+.label { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.label li {
+  padding: .1rem .65rem;
+  font-size: .85rem;
+  font-weight: 600;
+  background: var(--label-bg);
+  color: var(--label-teks);
+  border-radius: 999px;
+}
+.label.besar li { font-size: .95rem; padding: .25rem .85rem; }
+
+/* ---------- Keahlian ---------- */
+.grid-keahlian { display: grid; gap: 2rem; margin-top: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+
+/* ---------- Kontak ---------- */
+.daftar-kontak { margin: 0; padding: 0; list-style: none; }
+.daftar-kontak li { padding: .6rem 0; border-top: 1px solid var(--garis); }
+.daftar-kontak li:last-child { border-bottom: 1px solid var(--garis); }
+.daftar-kontak span { display: inline-block; width: 5.5rem; color: var(--redup); }
+
+/* ---------- Kaki ---------- */
+.kaki { padding: 2rem 0; border-top: 1px solid var(--garis); color: var(--redup); font-size: .9rem; }
+.kaki p { margin: 0; }

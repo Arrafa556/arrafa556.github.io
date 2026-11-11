@@ -1,0 +1,460 @@
+   git add .
+   git commit -m "Jelaskan perubahan singkat"
+   git push
+
+   setiap ada Perubahan singkat jalankan itu 
+
+   alamat web https://arrafa556.github.io/login.eduherst/
+
+vscode -> File / folder -> git bash -> git hub -> browser
+
+
+===///==== HTML
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: ganti Nama Anda -->
+  <title>Nama Anda | Portofolio</title>
+  <meta name="description" content="Portofolio Nama Anda: proyek web dengan HTML, CSS, JavaScript, PHP, dan MySQL.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="lewati" href="#konten">Langsung ke konten</a>
+
+  <header class="atas">
+    <div class="bungkus atas-isi">
+      <a class="logo" href="#beranda">Nama Anda</a>
+      <button class="tombol-menu" id="tombolMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" class="menu" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#proyek">Proyek</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="konten">
+
+    <!-- ============ BERANDA ============ -->
+    <section class="hero" id="beranda">
+      <div class="bungkus">
+        <p class="kecil">Halo, saya</p>
+        <!-- EDIT: nama dan peran Anda -->
+        <h1>Nama Anda</h1>
+        <p class="peran">Pelajar dan calon web developer</p>
+        <p class="pengantar">
+          Saya membuat halaman web, dari tampilan login sampai dashboard dan database.
+          Sedang belajar HTML, CSS, JavaScript, PHP, dan MySQL.
+        </p>
+        <div class="aksi">
+          <a class="tombol utama" href="#proyek">Lihat proyek</a>
+          <a class="tombol" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TENTANG ============ -->
+    <section class="bagian" id="tentang">
+      <div class="bungkus dua-kolom">
+        <div>
+          <h2>Tentang saya</h2>
+        </div>
+        <div class="teks">
+          <!-- EDIT: ceritakan diri Anda dengan kata-kata sendiri -->
+          <p>
+            Saya tertarik membuat web yang rapi dan mudah dipakai. Perjalanan belajar saya dimulai dari
+            halaman login sederhana, lalu berkembang ke dashboard, form pendaftaran, dan koneksi ke database.
+          </p>
+          <p>
+            Saya terbiasa mencari penyebab error langkah demi langkah dan menyimpan karya saya di GitHub.
+            Saat ini saya ingin memperdalam PHP, MySQL, dan JavaScript.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYEK ============ -->
+    <section class="bagian" id="proyek">
+      <div class="bungkus">
+        <h2>Proyek</h2>
+        <p class="pengantar-bagian">Beberapa karya yang sudah saya kerjakan.</p>
+
+        <div class="grid-proyek">
+
+          <!-- PROYEK 1 -->
+          <article class="proyek">
+            <div class="gambar">
+              <span class="pengganti">Tangkapan layar belum ditambahkan</span>
+              <!-- EDIT: simpan gambar di folder img dengan nama ini -->
+              <img src="img/proyek-login.png" alt="Halaman login Eduherst dengan latar gambar dan kartu form di tengah" width="800" height="450" loading="lazy">
+            </div>
+            <div class="isi">
+              <h3>Login dan dashboard Eduherst</h3>
+              <p>Halaman login dengan validasi dan dashboard data siswa: ringkasan angka, tabel, pencarian, tambah, dan hapus data.</p>
+              <ul class="label">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li>
+              </ul>
+              <div class="tautan">
+                <a href="https://arrafa556.github.io/login.eduherst/">Lihat demo</a>
+                <a href="https://github.com/Arrafa556/login.eduherst">Kode di GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYEK 2 -->
+          <article class="proyek">
+            <div class="gambar">
+              <span class="pengganti">Tangkapan layar belum ditambahkan</span>
+              <img src="img/proyek-pendaftaran.png" alt="Formulir pendaftaran dengan kolom nama, email, telepon, dan alamat" width="800" height="450" loading="lazy">
+            </div>
+            <div class="isi">
+              <h3>Formulir pendaftaran</h3>
+              <p>Form pendaftaran yang menyimpan data ke database MySQL, dengan validasi di sisi server dan halaman admin untuk melihat pendaftar.</p>
+              <ul class="label">
+                <li>PHP</li><li>MySQL</li><li>CSS</li>
+              </ul>
+              <div class="tautan">
+                <!-- EDIT: isi tautan GitHub kalau kodenya sudah diunggah -->
+                <span class="catatan-proyek">Berjalan di komputer lokal (XAMPP)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYEK 3 -->
+          <article class="proyek">
+            <div class="gambar">
+              <span class="pengganti">Tangkapan layar belum ditambahkan</span>
+              <img src="img/proyek-login-php.png" alt="Halaman login PHP dengan akun tersimpan di database" width="800" height="450" loading="lazy">
+            </div>
+            <div class="isi">
+              <h3>Login dengan PHP dan MySQL</h3>
+              <p>Sistem login yang menyimpan password dalam bentuk hash, memakai sesi, dan melindungi halaman agar hanya bisa dibuka setelah masuk.</p>
+              <ul class="label">
+                <li>PHP</li><li>MySQL</li><li>Sesi</li>
+              </ul>
+              <div class="tautan">
+                <span class="catatan-proyek">Berjalan di komputer lokal (XAMPP)</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KEAHLIAN ============ -->
+    <section class="bagian" id="keahlian">
+      <div class="bungkus">
+        <h2>Keahlian</h2>
+        <div class="grid-keahlian">
+          <div>
+            <h3>Frontend</h3>
+            <ul class="label besar"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Desain responsif</li></ul>
+          </div>
+          <div>
+            <h3>Backend dan data</h3>
+            <ul class="label besar"><li>PHP</li><li>MySQL</li><li>phpMyAdmin</li></ul>
+          </div>
+          <div>
+            <h3>Alat</h3>
+            <ul class="label besar"><li>VS Code</li><li>Git dan GitHub</li><li>XAMPP</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section class="bagian" id="kontak">
+      <div class="bungkus dua-kolom">
+        <div>
+          <h2>Kontak</h2>
+        </div>
+        <div class="teks">
+          <p>Tertarik bekerja sama atau ingin bertanya? Hubungi saya lewat:</p>
+          <ul class="daftar-kontak">
+            <!-- EDIT: ganti email Anda -->
+            <li><span>Email</span> <a href="mailto:emailanda@contoh.com">emailanda@contoh.com</a></li>
+            <li><span>GitHub</span> <a href="https://github.com/Arrafa556">github.com/Arrafa556</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="kaki">
+    <div class="bungkus">
+      <p>&copy; <span id="tahun">2026</span> Nama Anda. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+===///=== CSS
+
+:root {
+  --latar: #f6f3ee;
+  --kartu: #ffffff;
+  --teks: #1f2a2e;
+  --redup: #5d6a6f;
+  --garis: #d9d3c8;
+  --aksen: #0a4352;
+  --aksen-teks: #ffffff;
+  --label-bg: #e6efe9;
+  --label-teks: #17493a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --latar: #12191b;
+    --kartu: #1a2427;
+    --teks: #eaf0f1;
+    --redup: #9fb0b5;
+    --garis: #2e3d41;
+    --aksen: #7cc8d8;
+    --aksen-teks: #0b1417;
+    --label-bg: #213a33;
+    --label-teks: #b7e4d0;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--latar);
+  color: var(--teks);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+}
+
+a { color: var(--aksen); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--aksen);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.bungkus { width: min(100% - 2.5rem, 64rem); margin-inline: auto; }
+
+.lewati {
+  position: absolute;
+  left: -999px;
+  top: .5rem;
+  padding: .5rem 1rem;
+  background: var(--aksen);
+  color: var(--aksen-teks);
+  z-index: 20;
+}
+.lewati:focus { left: .5rem; }
+
+/* ---------- Header ---------- */
+.atas {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--latar);
+  border-bottom: 1px solid var(--garis);
+}
+.atas-isi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.75rem;
+  gap: 1rem;
+}
+.logo { font-weight: 700; font-size: 1.1rem; color: var(--teks); text-decoration: none; }
+.menu { display: flex; gap: 1.5rem; }
+.menu a { color: var(--teks); text-decoration: none; padding: .25rem 0; }
+.menu a:hover { color: var(--aksen); text-decoration: underline; }
+.tombol-menu {
+  display: none;
+  padding: .45rem .9rem;
+  font: inherit;
+  color: var(--teks);
+  background: transparent;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+  cursor: pointer;
+}
+@media (max-width: 40rem) {
+  .tombol-menu { display: inline-block; }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: .5rem 1.25rem 1rem;
+    background: var(--latar);
+    border-bottom: 1px solid var(--garis);
+  }
+  .menu.terbuka { display: flex; }
+  .menu a { padding: .7rem 0; border-top: 1px solid var(--garis); }
+  .menu a:first-child { border-top: 0; }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: clamp(3.5rem, 10vw, 7rem) 0 clamp(3rem, 8vw, 5rem); }
+.kecil { margin: 0 0 .5rem; color: var(--redup); }
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 8vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.peran { margin: .75rem 0 1.25rem; font-size: 1.25rem; color: var(--aksen); font-weight: 600; }
+.pengantar { max-width: 38rem; margin: 0 0 2rem; font-size: 1.1rem; color: var(--redup); }
+.aksi { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.tombol {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  font-weight: 600;
+  color: var(--teks);
+  text-decoration: none;
+  border: 1px solid var(--garis);
+  border-radius: 6px;
+}
+.tombol:hover { border-color: var(--aksen); }
+.tombol.utama { background: var(--aksen); color: var(--aksen-teks); border-color: var(--aksen); }
+.tombol.utama:hover { filter: brightness(1.12); }
+
+/* ---------- Bagian umum ---------- */
+.bagian { padding: clamp(3rem, 7vw, 5rem) 0; border-top: 1px solid var(--garis); }
+h2 { margin: 0 0 .5rem; font-size: 1.75rem; letter-spacing: -0.01em; }
+h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.pengantar-bagian { margin: 0 0 2rem; color: var(--redup); }
+
+.dua-kolom { display: grid; gap: 1.5rem 3rem; grid-template-columns: 1fr 2fr; }
+@media (max-width: 40rem) { .dua-kolom { grid-template-columns: 1fr; } }
+.teks p { margin: 0 0 1rem; max-width: 40rem; }
+
+/* ---------- Proyek ---------- */
+.grid-proyek {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+.proyek {
+  display: flex;
+  flex-direction: column;
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gambar {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--label-bg);
+  display: grid;
+  place-items: center;
+}
+.gambar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.pengganti { padding: 1rem; font-size: .9rem; text-align: center; color: var(--label-teks); }
+.isi { display: flex; flex-direction: column; flex: 1; padding: 1.25rem; }
+.isi p { margin: 0 0 1rem; color: var(--redup); font-size: .95rem; }
+.tautan { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: auto; font-size: .95rem; font-weight: 600; }
+.catatan-proyek { color: var(--redup); font-weight: 400; }
+
+.label { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.label li {
+  padding: .1rem .65rem;
+  font-size: .85rem;
+  font-weight: 600;
+  background: var(--label-bg);
+  color: var(--label-teks);
+  border-radius: 999px;
+}
+.label.besar li { font-size: .95rem; padding: .25rem .85rem; }
+
+/* ---------- Keahlian ---------- */
+.grid-keahlian { display: grid; gap: 2rem; margin-top: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+
+/* ---------- Kontak ---------- */
+.daftar-kontak { margin: 0; padding: 0; list-style: none; }
+.daftar-kontak li { padding: .6rem 0; border-top: 1px solid var(--garis); }
+.daftar-kontak li:last-child { border-bottom: 1px solid var(--garis); }
+.daftar-kontak span { display: inline-block; width: 5.5rem; color: var(--redup); }
+
+/* ---------- Kaki ---------- */
+.kaki { padding: 2rem 0; border-top: 1px solid var(--garis); color: var(--redup); font-size: .9rem; }
+.kaki p { margin: 0; }
+
+
+===///=== Js
+
+// ============================================================
+// Skrip portofolio: menu di HP, tahun otomatis, gambar cadangan
+// ============================================================
+
+// 1. Menu di layar kecil
+const tombolMenu = document.getElementById("tombolMenu");
+const menu = document.getElementById("menu");
+
+tombolMenu.addEventListener("click", function () {
+  const terbuka = menu.classList.toggle("terbuka");
+  tombolMenu.setAttribute("aria-expanded", String(terbuka));
+});
+
+// Tutup menu setelah salah satu tautan diklik
+menu.querySelectorAll("a").forEach(function (a) {
+  a.addEventListener("click", function () {
+    menu.classList.remove("terbuka");
+    tombolMenu.setAttribute("aria-expanded", "false");
+  });
+});
+
+// 2. Tahun di bagian bawah halaman
+document.getElementById("tahun").textContent = new Date().getFullYear();
+
+// 3. Kalau gambar proyek belum ada, sembunyikan gambar rusak
+//    sehingga tulisan "Tangkapan layar belum ditambahkan" yang tampil
+document.querySelectorAll(".gambar img").forEach(function (img) {
+  img.addEventListener("error", function () {
+    img.style.display = "none";
+  });
+});
+
+seorang pengembang web dengan pengalaman dalam membangun aplikasi web yang Masih Juniorseorang pengembang web dengan pengalaman dalam membangun aplikasi web yang Masih Junior
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  color: var(--teks);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+
+  /* Latar: lapisan gelap tipis + gambar (alamat dibaca dari lokasi style.css) */
+  background-color: var(--latar);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("img/latar.jpg.jpe");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
